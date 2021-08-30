@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script>
+      function attdataHoraAtual() {
+        window.dataHoraAtual.value = (new Date()).toISOString();
+      }
+
+      const dadosEjs = <%=JSON.stringify(locals, null, 2)%>
+    </script>
+  </head>
+  <body><pre><%=JSON.stringify(locals, null, 2)%></pre>
+
+    dataHoraAtual: <input type="text" id="dataHoraAtual"><br>
+    <button onclick="attdataHoraAtual()">Atualizar dataHoraAtual</button>
+  </body>
+</html>
